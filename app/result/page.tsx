@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
-export default function ResultPage() {
+function ResultContent() {
   const [prompt, setPrompt] = useState('')
   const searchParams = useSearchParams()
 
@@ -47,3 +47,10 @@ export default function ResultPage() {
   )
 }
 
+export default function ResultPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ResultContent />
+    </Suspense>
+  )
+}

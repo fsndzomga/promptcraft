@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Palette, Image, Lightbulb } from 'lucide-react'
+import { ArrowRight, Palette, Image as LucideImage, Lightbulb } from 'lucide-react'
 
 export default function LandingPage() {
   return (
@@ -57,7 +57,7 @@ export default function LandingPage() {
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                    <Image className="h-6 w-6" />
+                    <LucideImage className="h-6 w-6" />
                   </div>
                 </div>
                 <div className="ml-4">
@@ -88,4 +88,3 @@ export default function LandingPage() {
     </main>
   )
 }
-
